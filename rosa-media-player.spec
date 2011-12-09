@@ -1,7 +1,7 @@
 Summary:	Complete front-end for mplayer written in Qt4
 Name:		rosa-media-player
-Version:	0.951
-Release:	%mkrel 3
+Version:	0.952
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Video
 Url:		http://smplayer.sourceforge.net
