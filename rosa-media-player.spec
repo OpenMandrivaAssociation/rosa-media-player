@@ -2,7 +2,7 @@ Summary:	Multimedia player based on mplayer technology
 Summary (ru_RU.UTF-8): Мультимединый проигрыватель, основанный на технологиях MPlayer
 Name:		rosa-media-player
 Version:	0.99
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv2+
 Group:		Video
 Url:		http://smplayer.sourceforge.net
@@ -51,29 +51,15 @@ ROMP позволяет выделять отдельный фрагмент в�
 # remove wrongly put docs
 rm -rf %{buildroot}%{_datadir}/doc
 
-desktop-file-install \
-	--remove-key='Encoding' \
-	--dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*
+#desktop-file-install \
+#	--remove-key='Encoding' \
+#	--dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*
 
-%if %mdkversion < 200900
-%post
-%{update_menus}
-%{update_desktop_database}
-%update_icon_cache hicolor
-%endif
-
-%if %mdkversion < 200900
-%postun
-%{clean_menus}
-%{clean_desktop_database}
-%clean_icon_cache hicolor
-%endif
-
-%clean
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+#%clean
+#[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 
 %files
-%defattr(644,root,root,755)
+#--%defattr(644,root,root,755)
 %doc Changelog *.txt
 %dir %{_datadir}/%{name}
 %dir %{_datadir}/%{name}/shortcuts
