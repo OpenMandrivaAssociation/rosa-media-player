@@ -55,11 +55,11 @@ rm -rf %{buildroot}%{_datadir}/doc
 #	--remove-key='Encoding' \
 #	--dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*
 
-#%clean
-#[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+%clean
+[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 
 %files
-#--%defattr(644,root,root,755)
+%defattr(644,root,root,755)
 %doc Changelog *.txt
 %dir %{_datadir}/%{name}
 %dir %{_datadir}/%{name}/shortcuts
