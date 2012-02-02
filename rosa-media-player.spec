@@ -97,4 +97,3 @@ rm -rf %{buildroot}%{_datadir}/doc
 %lang(zh_CN) %{_datadir}/%{name}/translations/rosamp_zh_CN.qm
 %lang(zh_TW) %{_datadir}/%{name}/translations/rosamp_zh_TW.qm
 
-
