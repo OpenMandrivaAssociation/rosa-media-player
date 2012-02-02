@@ -1,7 +1,7 @@
 Summary:	Multimedia player based on mplayer technology
 Summary (ru_RU.UTF-8): Мультимединый проигрыватель, основанный на технологиях MPlayer
 Name:		rosa-media-player
-Version:	0.99
+Version:	0.991
 Release:	%mkrel 2
 License:	GPLv2+
 Group:		Video
