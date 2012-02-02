@@ -1,5 +1,4 @@
 Summary:	Multimedia player based on mplayer technology
-Summary (ru_RU.UTF-8): Мультимединый проигрыватель, основанный на технологиях MPlayer
 Name:		rosa-media-player
 Version:	0.991
 Release:	%mkrel 2
@@ -18,24 +17,15 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 Rosa Media Player (ROMP) - multimedia player that supports most of audio and video formats such as Audio CD, DVD, Video CD,
 multimedia files in AVi, ASF/WMV/WMA, MOV/MP4, RealMedia, Ogg Vorbis, NUT, NSV, VIVO, FLI, NuppelVideo, yuv4mpeg, FILM (.cpk),
 RoQ, PVA and Matroska  formats recorded with video codecs - DivX , MPEG-1, MPEG-2, MPEG-4, Sorenson, WMV, RealVideo, x264
-and audio codecs MP3, Musepack, Vorbis, RealAudio, AC3/A52 (Dolby Digital), AAC (MPEG-4 аудио), QuickTime, VIVO audio and WMA
-and many other less widespread video and audio codecs. 
+and audio codecs MP3, Musepack, Vorbis, RealAudio, AC3/A52 (Dolby Digital), AAC (MPEG-4 audio), QuickTime, VIVO audio and WMA
+and many other less widespread video and audio codecs.
 It also supports streaming via HTTP/FTP, RTP/RTSP, MMS/MMST, MPST, SDP, capture and record (via mencoder) of television signal.
 ROMP allows you to trim a particular piece of video, extract audio from multimedia files and record screen presentations and
 many other things.
 
-%description -l ru_RU.UTF-8
-Rosa Media Player (ROMP) - мультимедийный проигрыватель, который поддерживает большинство аудио- и видеоформатов, 
-такие как Audio CD, DVD, Video CD, мультимедиа‐файлы в формате AVI, ASF/WMV/WMA, MOV/MP4, RealMedia, 
-Ogg Vorbis, NUT, NSV, VIVO, FLI, NuppelVideo, yuv4mpeg, FILM (.cpk) формат, RoQ, PVA и Matroska, 
-записанные с видеокодеками DivX, MPEG-1, MPEG-2, MPEG-4, Sorenson, WMV, RealVideo, x264 (реализация 
-стандарта H.264) и аудиокодеками MP3, Musepack, Vorbis, RealAudio, AC3/A52 (Dolby Digital), AAC (MPEG-4 аудио), 
-QuickTime, VIVO аудио и WMA, а также многими другими более‐менее распространёнными видео‐ и аудио‐кодеками. 
-Также поддерживается потоковое воспроизведение через HTTP/FTP, RTP/RTSP, MMS/MMST, MPST, SDP; захват и запись(MEncoder) телевизионного сигнала.
-ROMP позволяет выделять отдельный фрагмент видео, извлекать аудиодорожку из мультимедиа-файлов, записывать экранные презентации и многое другое.
-
 %prep
-%setup -qn %{name}-%{version}
+%setup -q
+#-n %{name}-%{version}
 
 %build
 %setup_compile_flags
