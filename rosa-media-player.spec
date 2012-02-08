@@ -1,7 +1,7 @@
 Summary:	Multimedia player based on mplayer technology
 Name:		rosa-media-player
 Version:	0.991
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	GPLv2+
 Group:		Video
 Url:		http://smplayer.sourceforge.net
@@ -18,14 +18,13 @@ Rosa Media Player (ROMP) - multimedia player that supports most of audio and vid
 multimedia files in AVi, ASF/WMV/WMA, MOV/MP4, RealMedia, Ogg Vorbis, NUT, NSV, VIVO, FLI, NuppelVideo, yuv4mpeg, FILM (.cpk),
 RoQ, PVA and Matroska  formats recorded with video codecs - DivX , MPEG-1, MPEG-2, MPEG-4, Sorenson, WMV, RealVideo, x264
 and audio codecs MP3, Musepack, Vorbis, RealAudio, AC3/A52 (Dolby Digital), AAC (MPEG-4 audio), QuickTime, VIVO audio and WMA
-and many other less widespread video and audio codecs.
+and many other less widespread video and audio codecs. 
 It also supports streaming via HTTP/FTP, RTP/RTSP, MMS/MMST, MPST, SDP, capture and record (via mencoder) of television signal.
 ROMP allows you to trim a particular piece of video, extract audio from multimedia files and record screen presentations and
 many other things.
 
 %prep
-%setup -q
-#-n %{name}-%{version}
+%setup -qn %{name}-%{version}
 
 %build
 %setup_compile_flags
@@ -45,11 +44,11 @@ rm -rf %{buildroot}%{_datadir}/doc
 #	--remove-key='Encoding' \
 #	--dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*
 
-%clean
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+#%clean
+#[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 
 %files
-%defattr(644,root,root,755)
+#--%defattr(644,root,root,755)
 %doc Changelog *.txt
 %dir %{_datadir}/%{name}
 %dir %{_datadir}/%{name}/shortcuts
@@ -96,4 +95,5 @@ rm -rf %{buildroot}%{_datadir}/doc
 %lang(vi) %{_datadir}/%{name}/translations/rosamp_vi_VN.qm
 %lang(zh_CN) %{_datadir}/%{name}/translations/rosamp_zh_CN.qm
 %lang(zh_TW) %{_datadir}/%{name}/translations/rosamp_zh_TW.qm
+
 
