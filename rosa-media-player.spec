@@ -1,11 +1,11 @@
 Summary:	Multimedia player based on mplayer technology
 Name:		rosa-media-player
-Version:	0.991
-Release:	%mkrel 3
+Version:	1.0
+Release:	1
 License:	GPLv2+
 Group:		Video
 Url:		http://smplayer.sourceforge.net
-Source:		%{name}-%{version}.tar.bz2
+Source:		%{name}-%{version}.tar.gz
 BuildRequires:	qt4-devel	>= 4.2.0
 BuildRequires:	qt4-linguist	>= 4.2.0
 Requires:	mplayer		>= 1.0-1.rc1
@@ -24,7 +24,7 @@ ROMP allows you to trim a particular piece of video, extract audio from multimed
 many other things.
 
 %prep
-%setup -qn %{name}-%{version}
+%setup -qn %{name}
 
 %build
 %setup_compile_flags
