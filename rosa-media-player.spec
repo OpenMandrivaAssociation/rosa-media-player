@@ -5,13 +5,12 @@ Release:	1
 License:	GPLv2+
 Group:		Video
 Url:		http://smplayer.sourceforge.net
-Source:		%{name}-%{version}.tar.gz
+Source0:	%{name}-%{version}.tar.gz
 BuildRequires:	qt4-devel	>= 4.2.0
 BuildRequires:	qt4-linguist	>= 4.2.0
 Requires:	mplayer		>= 1.0-1.rc1
 Requires:	mencoder
 Requires:	ffmpeg
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 Rosa Media Player (ROMP) - multimedia player that supports most of audio and
@@ -37,8 +36,6 @@ multimedia files and record screen presentations and many other things.
 #KDE_SUPPORT=1
 
 %install
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
-
 %makeinstall_std PREFIX=%{_prefix}
 
 # remove wrongly put docs
@@ -48,11 +45,7 @@ rm -rf %{buildroot}%{_datadir}/doc
 #	--remove-key='Encoding' \
 #	--dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*
 
-#%clean
-#[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
-
 %files
-#--%defattr(644,root,root,755)
 %doc Changelog *.txt
 %dir %{_datadir}/%{name}
 %dir %{_datadir}/%{name}/shortcuts
@@ -99,5 +92,3 @@ rm -rf %{buildroot}%{_datadir}/doc
 %lang(vi) %{_datadir}/%{name}/translations/rosamp_vi_VN.qm
 %lang(zh_CN) %{_datadir}/%{name}/translations/rosamp_zh_CN.qm
 %lang(zh_TW) %{_datadir}/%{name}/translations/rosamp_zh_TW.qm
-
-
