@@ -28,6 +28,7 @@ multimedia files and record screen presentations and many other things.
 
 %prep
 %setup -qn %{name}
+find -name \*.cpp -o -name \*.h | xargs chmod 644
 
 %build
 %setup_compile_flags
