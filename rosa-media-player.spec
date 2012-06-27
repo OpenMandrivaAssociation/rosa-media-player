@@ -46,7 +46,7 @@ rm -rf %{buildroot}%{_datadir}/doc
 #	--dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*
 
 %files
-%doc Changelog *.txt
+%doc *.txt src/docs/*
 %dir %{_datadir}/%{name}
 %dir %{_datadir}/%{name}/shortcuts
 %dir %{_datadir}/%{name}/translations
