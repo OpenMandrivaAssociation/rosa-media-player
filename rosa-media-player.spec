@@ -1,3 +1,5 @@
+%define debug_package %{nil}
+
 Summary:	Multimedia player based on mplayer technology
 Name:		rosa-media-player
 Version:	1.5.1
