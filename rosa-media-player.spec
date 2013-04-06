@@ -2,7 +2,7 @@
 
 Summary:	Multimedia player based on mplayer technology
 Name:		rosa-media-player
-Version:	1.5.1
+Version:	1.6
 Release:	1
 License:	GPLv2+
 Group:		Video
@@ -56,7 +56,7 @@ rm -r %{buildroot}%{_datadir}/doc
 #	--dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*
 
 %files
-%doc *.txt src/docs/*
+%doc Changelog *.txt
 %dir %{_datadir}/%{name}
 %dir %{_datadir}/%{name}/shortcuts
 %dir %{_datadir}/%{name}/translations
