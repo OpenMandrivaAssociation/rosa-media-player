@@ -8,6 +8,7 @@ License:	GPLv2+
 Group:		Video
 Url:		http://www.rosalinux.com
 Source0:	%{name}-%{version}.tar.gz
+Patch0:		rosa-media-player-1.6-set-initialpreference-to-use-by-default.patch
 BuildRequires:	qt4-devel	>= 4.2.0
 BuildRequires:	qt4-linguist	>= 4.2.0
 BuildRequires:	wildmidi-devel
@@ -37,6 +38,7 @@ multimedia files and record screen presentations and many other things.
 
 %prep
 %setup -qn %{name}
+%patch0 -p1 -b .pref~
 
 %build
 %setup_compile_flags
