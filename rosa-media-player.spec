@@ -7,7 +7,7 @@ Release:	1
 License:	GPLv2+
 Group:		Video
 Url:		http://www.rosalinux.com
-Source:		%{name}-%{version}.tar.gz
+Source0:	%{name}-%{version}.tar.gz
 BuildRequires:	qt4-devel	>= 4.2.0
 BuildRequires:	qt4-linguist	>= 4.2.0
 BuildRequires:	wildmidi-devel
@@ -16,14 +16,7 @@ Requires:	mencoder
 Requires:	ffmpeg
 Requires:	xdg-utils
 Requires:	timidity-patch-gravis
-%ifarch %ix86
-Requires:	libwildmidi1
-%endif
-%ifarch x86_64
-Requires:	lib64wildmidi1
-%endif
-
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
+Requires:	libWildMidi.so.1%{_arch_tag_suffix}
 
 %description
 Rosa Media Player (ROMP) - multimedia player that supports
@@ -56,14 +49,11 @@ multimedia files and record screen presentations and many other things.
 %makeinstall_std PREFIX=%{_prefix}
 
 # remove wrongly put docs
-rm -rf %{buildroot}%{_datadir}/doc
+rm -r %{buildroot}%{_datadir}/doc
 
 #desktop-file-install \
 #	--remove-key='Encoding' \
 #	--dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*
-
-#%clean
-#[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 
 %files
 %doc *.txt src/docs/*
@@ -71,7 +61,7 @@ rm -rf %{buildroot}%{_datadir}/doc
 %dir %{_datadir}/%{name}/shortcuts
 %dir %{_datadir}/%{name}/translations
 
-%attr(755,root,root) %{_bindir}/%{name}
+%{_bindir}/%{name}
 
 #%{_mandir}/man1/%{name}.*
 %{_datadir}/%{name}/*.conf
@@ -115,30 +105,3 @@ rm -rf %{buildroot}%{_datadir}/doc
 %lang(vi) %{_datadir}/%{name}/translations/rosamp_vi_VN.qm
 %lang(zh_CN) %{_datadir}/%{name}/translations/rosamp_zh_CN.qm
 %lang(zh_TW) %{_datadir}/%{name}/translations/rosamp_zh_TW.qm
-
-
-
-
-%changelog
-* Mon Dec 19 2011 Evgeniy Auginev <eauginev@mandriva.org> 0.952-4mdv2012.0
-+ Revision: 743747
-- audio files playing interface error fixed
-
-* Fri Dec 16 2011 Evgeniy Auginev <eauginev@mandriva.org> 0.952-2
-+ Revision: 743050
--copy parameter added on split video function
-
-* Fri Dec 09 2011 Evgeniy Auginev <eauginev@mandriva.org> 0.952-1
-+ Revision: 739438
-- Playlist item hints added; free-space calculating algorithm changed for split video function; one running instance option fixed
-
-* Mon Nov 28 2011 Evgeniy Auginev <eauginev@mandriva.org> 0.951-3
-+ Revision: 734874
-- fix archive name
-- change version number
-
-* Mon Nov 28 2011 Alex Burmashev <burmashev@mandriva.org> 0.95-3
-+ Revision: 734825
-- import rosa-media-player
-
-
