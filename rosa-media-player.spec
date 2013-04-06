@@ -17,6 +17,8 @@ Requires:	mencoder
 Requires:	ffmpeg
 Requires:	xdg-utils
 Requires:	timidity-patch-gravis
+Requires:	qjson
+Requires:	wget
 Requires:	libWildMidi.so.1%{_arch_tag_suffix}
 
 %description
@@ -58,7 +60,7 @@ rm -r %{buildroot}%{_datadir}/doc
 #	--dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*
 
 %files
-%doc Changelog *.txt
+%doc *.txt
 %dir %{_datadir}/%{name}
 %dir %{_datadir}/%{name}/shortcuts
 %dir %{_datadir}/%{name}/translations
