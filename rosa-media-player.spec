@@ -12,6 +12,7 @@ Patch0:		rosa-media-player-1.6-set-initialpreference-to-use-by-default.patch
 BuildRequires:	qt4-devel	>= 4.2.0
 BuildRequires:	qt4-linguist	>= 4.2.0
 BuildRequires:	wildmidi-devel
+BuilDrequires:	pkgconfig(QJson)
 Requires:	mplayer		>= 1.0-1.rc1
 Requires:	mencoder
 Requires:	ffmpeg
