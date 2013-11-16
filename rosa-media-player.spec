@@ -3,7 +3,7 @@
 Summary:	Multimedia player based on mplayer technology
 Name:		rosa-media-player
 Version:	1.6
-Release:	2
+Release:	3
 License:	GPLv2+
 Group:		Video
 Url:		http://www.rosalinux.com
@@ -12,8 +12,8 @@ Patch0:		rosa-media-player-1.6-set-initialpreference-to-use-by-default.patch
 BuildRequires:	qt4-devel	>= 4.2.0
 BuildRequires:	qt4-linguist	>= 4.2.0
 BuildRequires:	wildmidi-devel
-BuilDrequires:	pkgconfig(QJson)
-Requires:	mplayer		>= 1.0-1.rc1
+BuildRequires:	pkgconfig(QJson)
+Requires:	mplayer >= 1.0-1.rc1
 Requires:	mencoder
 Requires:	ffmpeg
 Requires:	xdg-utils
