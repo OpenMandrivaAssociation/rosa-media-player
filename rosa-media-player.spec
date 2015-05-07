@@ -2,13 +2,13 @@
 
 Summary:	Multimedia player based on mplayer technology
 Name:		rosa-media-player
-Version:	1.6
-Release:	10
+Version:	1.6.11
+Release:	1
 License:	GPLv2+
 Group:		Video
 Url:		http://www.rosalinux.com
 Source0:	%{name}-%{version}.tar.gz
-Patch0:		rosa-media-player-1.6-set-initialpreference-to-use-by-default.patch
+Patch0:		rosa-media-player-1.6.11-open-dvd.patch
 BuildRequires:	qt4-devel	>= 4.2.0
 BuildRequires:	qt4-linguist	>= 4.2.0
 BuildRequires:	wildmidi-devel

@@ -1,0 +1,12 @@
+diff -urN rosa-media-player.orig/src/core.cpp rosa-media-player/src/core.cpp
+--- rosa-media-player.orig/src/core.cpp	2013-08-06 09:42:51.000000000 +0400
++++ rosa-media-player/src/core.cpp	2015-03-03 17:01:02.751298047 +0300
+@@ -366,7 +366,7 @@
+         {
+             qDebug("Core::open: * directory contains a dvd");
+ #if DVDNAV_SUPPORT
+-            openDVD( DiscName::joinDVD(1, file, pref->use_dvdnav) );
++            openDVD( DiscName::joinDVD(0, file, pref->use_dvdnav) );
+ #else
+             openDVD( DiscName::joinDVD(1, file, false) );
+ #endif
