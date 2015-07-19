@@ -3,7 +3,7 @@
 Summary:	Multimedia player based on mplayer technology
 Name:		rosa-media-player
 Version:	1.6.11
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Video
 Url:		http://www.rosalinux.com
