@@ -6,7 +6,7 @@ Version:	1.6.11
 Release:	2
 License:	GPLv2+
 Group:		Video
-Url:		http://www.rosalinux.com
+Url:		https://www.rosalinux.com
 Source0:	%{name}-%{version}.tar.gz
 Patch0:		rosa-media-player-1.6.11-open-dvd.patch
 BuildRequires:	qt4-devel	>= 4.2.0
