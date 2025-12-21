@@ -9,6 +9,7 @@ Group:		Video
 Url:		https://www.rosalinux.com
 Source0:	%{name}-%{version}.tar.gz
 Patch0:		rosa-media-player-1.6.11-open-dvd.patch
+BuildRequires:	make
 BuildRequires:	qt4-devel	>= 4.2.0
 BuildRequires:	qt4-linguist	>= 4.2.0
 BuildRequires:	wildmidi-devel
